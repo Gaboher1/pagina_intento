@@ -213,7 +213,7 @@ export default function FAQ() {
         <p>Puedes hablar directamente con un asesor.</p>
 
         <div className="contact-buttons">
-          <a href="https://wa.me/525564309985" className="w-btn">
+          <a href="https://wa.me/52555526905683" className="w-btn">
             <FaWhatsapp /> WhatsApp
           </a>
           <a href="mailto:contacto@email.com" className="m-btn">

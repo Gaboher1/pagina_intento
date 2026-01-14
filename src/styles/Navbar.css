@@ -5,86 +5,78 @@
   top: 0;
   z-index: 9999;
 
-  /* Fondo azul oscuro que combina con tu UI */
   background: rgba(7, 16, 31, 0.70);
   backdrop-filter: blur(16px);
-
-  /* Glow azul */
   box-shadow: 0 8px 30px rgba(0, 199, 255, 0.22);
 }
 
 .nav-inner {
   max-width: 1400px;
   margin: auto;
-  padding: 14px 32px;
+  padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 32px);
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* === LOGO === */
+/* ================= LOGO ================= */
 .nav-logo {
-  font-size: 1.9rem;
-  font-weight: 900;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: #e8f5ff;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
 }
 
-.nav-logo:hover {
-  text-shadow: 0 0 14px #00c7ff;
+.nav-logo-img {
+  height: clamp(55px, 7vw, 95px);
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 12px rgba(0, 199, 255, 0.35));
 }
 
-.logo-accent {
-  color: #5ac8fa;
-}
-
-/* === MENÚ === */
+/* ================= MENÚ ================= */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 32px; /* separación equilibrada */
+  gap: clamp(18px, 3vw, 32px);
   padding: 0;
   margin: 0;
 }
 
-/* Item */
 .nav-item {
   padding: 6px 0;
 }
 
-/* === ENLACES === */
+/* ================= LINKS ================= */
 .nav-links li a {
   color: #d9e7f5;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 80px;
-  height: 40px;
+  width: clamp(60px, 6vw, 80px);
+  height: clamp(36px, 4vw, 40px);
   position: relative;
 
   transition: 0.35s ease;
 }
 
-/* Glow en hover */
 .nav-links li a:hover {
   color: #ffffff;
   text-shadow: 0 0 14px #00c7ff;
 }
 
-/* === ÍCONO === */
+/* ================= ICONO ================= */
 .nav-icon {
-  font-size: 1.35rem;
-  color: #5ac8fa; /* azul que combina con tu diseño */
-  transition: opacity 0.25s ease, transform 0.3s ease;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  color: #5ac8fa;
   position: absolute;
+  transition: opacity 0.25s ease, transform 0.3s ease;
 }
 
 .nav-icon.hidden {
@@ -92,14 +84,24 @@
   transform: translateY(-14px);
 }
 
-/* === TEXTO (al hacer hover) === */
+/* 🌿 ICONOS VERDES PREMIUM */
+.nav-icon-green {
+  color: #4ade80;
+  filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.45));
+}
+
+.nav-links li a:hover .nav-icon-green {
+  color: #6ee7b7;
+  filter: drop-shadow(0 0 16px rgba(110, 231, 183, 0.65));
+}
+
+/* ================= TEXTO ================= */
 .nav-text {
   opacity: 0;
   transform: translateY(14px);
   position: absolute;
-
   transition: 0.32s ease;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.2vw, 1rem);
   letter-spacing: 1px;
   color: #e8f5ff;
 }
@@ -109,15 +111,17 @@
   transform: translateY(0);
 }
 
-/* === HAMBURGER === */
+/* ================= HAMBURGER ================= */
 .nav-hamburger {
-  font-size: 1.9rem;
+  font-size: clamp(1.6rem, 5vw, 1.9rem);
   color: #00c7ff;
   cursor: pointer;
   display: none;
 }
 
-/* === RESPONSIVE === */
+/* ================= RESPONSIVE ================= */
+
+/* 📲 TABLET / MOBILE */
 @media (max-width: 950px) {
   .nav-hamburger {
     display: block;
@@ -129,18 +133,23 @@
     right: 0;
 
     height: 100vh;
-    width: 70%;
-    padding-top: 90px;
+    width: min(100%, 380px);
+    padding-top: clamp(70px, 10vw, 90px);
+    padding-bottom: 40px;
 
-    background: rgba(7, 16, 31, 0.92);
+    background: rgba(7, 16, 31, 0.95);
     backdrop-filter: blur(20px);
 
     flex-direction: column;
-    gap: 30px;
+    gap: clamp(20px, 5vw, 30px);
     align-items: center;
 
+    /* 🔥 SCROLL SOLUCIÓN */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
     transform: translateX(100%);
-    transition: 0.4s ease;
+    transition: transform 0.4s ease;
   }
 
   .nav-active {
@@ -150,19 +159,31 @@
   .nav-links li a {
     width: auto;
     height: auto;
-    font-size: 1.4rem;
+    font-size: clamp(1.15rem, 4vw, 1.4rem);
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .nav-icon {
+    position: relative;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .nav-text {
+    opacity: 1;
+    transform: none;
+    position: relative;
   }
 }
 
-.nav-logo-img {
-  height: 55px;        /* Mantiene el tamaño real que controla el navbar */
-  width: auto;
-  object-fit: contain;
+/* 📱 CELULAR PEQUEÑO */
+@media (max-width: 480px) {
+  .nav-links {
+    padding-top: 70px;
+  }
 
-  /* 🔵 Aumentamos su tamaño visual */
-  transform: scale(3.0);   /* Ajusta a tu gusto: 1.2, 1.4, 1.6, etc. */
-
-  /* Para que no afecte el flujo */
-  transform-origin: center;
+  .nav-links li a {
+    font-size: 1.15rem;
+  }
 }
-

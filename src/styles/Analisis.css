@@ -406,3 +406,166 @@
     background-position: center bottom;
   }
 }
+/* ============================================================
+   RESPONSIVE – TABLETS
+============================================================ */
+@media (max-width: 1024px) {
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .analisis-main-card {
+    padding: 26px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  .analisis-list li {
+    font-size: 16px;
+  }
+
+  .analisis-card-grid {
+    gap: 22px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE – CELULARES GRANDES
+============================================================ */
+@media (max-width: 768px) {
+
+  .analisis-wrapper {
+    padding: 40px 15px;
+  }
+
+  /* HERO */
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  /* CARD PRINCIPAL */
+  .analisis-main-card {
+    padding: 22px;
+    border-left: 4px solid #5ac8fa;
+  }
+
+  .card-title {
+    font-size: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* GRID */
+  .analisis-card-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  /* MINI CARDS */
+  .mini-card,
+  .mini-card-new {
+    padding: 24px 18px;
+  }
+
+  .card-title-new {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .card-content-new p,
+  .card-content-new ul {
+    font-size: 14.5px;
+  }
+
+  /* ICONOS */
+  .icon-circle {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+
+  /* CARRUSEL */
+  .carousel-wrapper {
+    margin-top: 20px;
+  }
+
+  .carousel-card {
+    min-width: 220px;
+    max-width: 220px;
+    padding: 18px;
+  }
+
+  .carousel-card p {
+    font-size: 14.5px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE – CELULARES PEQUEÑOS
+============================================================ */
+@media (max-width: 480px) {
+
+  /* HERO */
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  /* CARD PRINCIPAL */
+  .analisis-main-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .analisis-list li {
+    font-size: 14.5px;
+  }
+
+  /* MINI CARDS */
+  .mini-card,
+  .mini-card-new {
+    border-radius: 18px;
+    padding: 22px 16px;
+  }
+
+  .card-title-new {
+    font-size: 16.5px;
+  }
+
+  .card-content-new p,
+  .card-content-new ul {
+    font-size: 14px;
+  }
+
+  /* ICONO */
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  /* CARRUSEL */
+  .carousel-card {
+    min-width: 200px;
+    max-width: 200px;
+  }
+}
+

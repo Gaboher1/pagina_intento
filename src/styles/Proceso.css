@@ -125,3 +125,125 @@
     width: 100%;
   }
 }
+
+/* ============================================================
+   RESPONSIVE COMPLETO – PROCESO (TABLET + MÓVIL)
+============================================================ */
+
+/* ====================== TABLETS ====================== */
+@media (max-width: 1024px) {
+  .proceso-section {
+    padding: 80px 18px;
+  }
+
+  .proceso-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .proceso-header p {
+    font-size: 1.15rem;
+  }
+
+  .timeline-card {
+    padding: 28px;
+  }
+}
+
+/* ====================== MÓVILES ====================== */
+@media (max-width: 768px) {
+
+  .proceso-section {
+    padding: 70px 16px;
+  }
+
+  .proceso-header {
+    margin-bottom: 60px;
+  }
+
+  .proceso-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .proceso-header p {
+    font-size: 1.05rem;
+  }
+
+  /* Línea a la izquierda */
+  .timeline::before {
+    left: 26px;
+  }
+
+  .timeline-item {
+    padding-left: 70px;
+    margin-bottom: 55px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    justify-content: flex-start;
+  }
+
+  .timeline-icon {
+    left: 26px;
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+  }
+
+  .timeline-card {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .timeline-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .timeline-card pre {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+
+  .proceso-cierre {
+    font-size: 1.1rem;
+    margin-top: 80px;
+  }
+}
+
+/* ====================== MÓVILES PEQUEÑOS ====================== */
+@media (max-width: 480px) {
+
+  .proceso-section {
+    padding: 60px 14px;
+  }
+
+  .proceso-header h1 {
+    font-size: 1.85rem;
+  }
+
+  .timeline-item {
+    padding-left: 60px;
+  }
+
+  .timeline-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+  }
+
+  .timeline-card {
+    padding: 20px;
+  }
+
+  .timeline-card h2 {
+    font-size: 1.15rem;
+  }
+
+  .timeline-card pre {
+    font-size: 0.9rem;
+  }
+
+  .proceso-cierre {
+    font-size: 1rem;
+  }
+}

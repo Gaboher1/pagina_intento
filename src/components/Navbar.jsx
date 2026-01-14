@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
@@ -14,7 +13,7 @@ import {
   FaShieldAlt
 } from "react-icons/fa";
 
-// 🔵 IMPORTA EL LOGO
+// 🔵 LOGO
 import logoDoc from "../assets/logo_doc.png";
 
 export default function Navbar() {
@@ -27,8 +26,20 @@ export default function Navbar() {
     { label: "Servicios", icon: <FaCogs />, path: "/servicios" },
     { label: "Proceso", icon: <FaRoute />, path: "/proceso" },
     { label: "FAQ", icon: <FaQuestion />, path: "/faq" },
-    { label: "Análisis", icon: <FaChartLine />, path: "/analisis" },
-    { label: "Antiplagio", icon: <FaShieldAlt />, path: "/antiplagio" },
+
+    // 🌿 ICONOS VERDES
+    {
+      label: "Análisis",
+      icon: <FaChartLine />,
+      path: "/analisis",
+      special: true
+    },
+    {
+      label: "Antiplagio",
+      icon: <FaShieldAlt />,
+      path: "/antiplagio",
+      special: true
+    }
   ];
 
   return (
@@ -59,10 +70,19 @@ export default function Navbar() {
               onMouseLeave={() => setHovered(null)}
             >
               <Link to={item.path} onClick={() => setOpen(false)}>
-                <span className={`nav-icon ${hovered === index ? "hidden" : ""}`}>
+                <span
+                  className={`nav-icon ${
+                    item.special ? "nav-icon-green" : ""
+                  } ${hovered === index ? "hidden" : ""}`}
+                >
                   {item.icon}
                 </span>
-                <span className={`nav-text ${hovered === index ? "visible" : ""}`}>
+
+                <span
+                  className={`nav-text ${
+                    hovered === index ? "visible" : ""
+                  }`}
+                >
                   {item.label}
                 </span>
               </Link>

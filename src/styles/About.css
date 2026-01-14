@@ -197,3 +197,114 @@
   backdrop-filter: blur(14px);
   transition: 0.3s ease;
 }
+
+/* ============================================================
+   RESPONSIVE DESIGN — TODAS LAS PANTALLAS
+============================================================ */
+
+/* ------------------ LAPTOPS / TABLETS GRANDES ------------------ */
+@media (max-width: 1200px) {
+  .about-hero-modern {
+    gap: 40px;
+  }
+
+  .about-hero-modern-text h1 {
+    font-size: 3rem;
+  }
+
+  .about-hero-modern-photo {
+    width: 300px;
+    height: 350px;
+  }
+}
+
+/* ------------------ TABLETS ------------------ */
+@media (max-width: 992px) {
+  .about-hero-modern {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .about-hero-modern-photo {
+    margin-top: 40px;
+  }
+
+  /* Timeline */
+  .timeline::before {
+    left: 24px;
+  }
+
+  .timeline-item,
+  .timeline-item.right {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 60px;
+  }
+
+  .timeline-dot {
+    left: 16px !important;
+    right: auto;
+  }
+}
+
+/* ------------------ MÓVILES ------------------ */
+@media (max-width: 576px) {
+  .about-hero-modern {
+    padding: 70px 5%;
+  }
+
+  .about-hero-modern-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-hero-modern-text p {
+    font-size: 1.05rem;
+  }
+
+  .about-hero-stats strong {
+    font-size: 1.8rem;
+  }
+
+  .about-hero-modern-photo {
+    width: 100%;
+    max-width: 280px;
+    height: 320px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .alt-card-grid {
+    gap: 20px;
+  }
+
+  .accordion-section details {
+    padding: 16px;
+  }
+
+  .floating-cards {
+    gap: 20px;
+  }
+}
+
+/* ------------------ MÓVILES PEQUEÑOS ------------------ */
+@media (max-width: 360px) {
+  .about-hero-modern-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .about-hero-modern-text p {
+    font-size: 1rem;
+  }
+
+  .about-hero-stats {
+    gap: 20px;
+  }
+}

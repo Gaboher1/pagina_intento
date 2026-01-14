@@ -136,3 +136,102 @@
   opacity: 0.95;
   color: #dcefff;
 }
+
+/* ============================================================
+   MODO GRID RESPONSIVE (6 TARJETAS – 3 Y 3)
+============================================================ */
+
+/* ================= TABLETS Y ABAJO ================= */
+@media (max-width: 1024px) {
+
+  /* Quitamos efecto carrusel visual, NO la funcionalidad */
+  .carousel-3d {
+    perspective: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 900px;
+  }
+
+  .card-3d {
+    width: 100%;
+    height: 210px;
+    padding: 18px;
+
+    transform: none !important; /* 🔑 */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  }
+
+  .card-3d.active {
+    transform: scale(1.05) !important;
+    box-shadow: 0 20px 45px rgba(39,148,214,0.45);
+  }
+
+  .card-3d h3 {
+    font-size: 1.05rem;
+  }
+
+  .card-3d p {
+    font-size: 0.85rem;
+  }
+
+  /* PANEL INFERIOR */
+  .detail-panel {
+    margin-top: 40px;
+    padding: 28px;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ================= MÓVILES ================= */
+@media (max-width: 768px) {
+
+  .carousel-3d {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .card-3d {
+    height: 190px;
+    padding: 16px;
+  }
+
+  .detail-panel {
+    width: 100%;
+    padding: 24px 20px;
+  }
+
+  .detail-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= MÓVILES PEQUEÑOS ================= */
+@media (max-width: 480px) {
+
+  .carousel-3d {
+    grid-template-columns: 1fr;
+  }
+
+  .card-3d {
+    height: auto;
+    padding: 18px;
+  }
+
+  .servicios-title {
+    font-size: 2.2rem;
+  }
+
+  .servicios-sub {
+    font-size: 1rem;
+  }
+
+  .detail-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
