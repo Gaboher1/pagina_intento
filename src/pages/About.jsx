@@ -14,12 +14,9 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h1>Dr. Omar E. Valencia-Ledezma</h1>
+          <h1>GRUPO OMEGA </h1>
           <p>
-            Investigador multidisciplinario con más de 15 años integrando biología molecular,
-            microbiología clínica, farmacología, salud pública y análisis científico aplicado.
-            Contribuye activamente al desarrollo de soluciones innovadoras para el diagnóstico,
-            prevención y análisis de enfermedades de alto impacto poblacional.
+            Grupo Omega, multidisciplinario, con más de 15 años integrando biología molecular, microbiología clínica, farmacología, salud pública y análisis científico aplicado. Contribuye activamente al desarrollo de soluciones innovadoras para el diagnóstico, prevención y análisis de enfermedades de alto impacto poblacional.
           </p>
 
           <motion.div
@@ -59,7 +56,7 @@ export default function About() {
           <motion.div className="alt-card-1" whileHover={{ scale: 1.05 }}>
             <h3>Formación Científica</h3>
             <p>
-              Doctor en Ciencias Biológicas y de la Salud, con especialización en biología
+              Ciencias Biológicas y de la Salud, con especialización en biología
               molecular, bioquímica, microbiología avanzada y diseño de estudios
               experimentales. Experiencia sólida en técnicas como qPCR, secuenciación,
               análisis de biomarcadores y validación molecular.

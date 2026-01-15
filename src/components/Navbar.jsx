@@ -21,26 +21,30 @@ export default function Navbar() {
   const [hovered, setHovered] = useState(null);
 
   const items = [
-    { label: "Inicio", icon: <FaHome />, path: "/" },
-    { label: "Quiénes Somos", icon: <FaUser />, path: "/quienes-somos" },
-    { label: "Servicios", icon: <FaCogs />, path: "/servicios" },
-    { label: "Proceso", icon: <FaRoute />, path: "/proceso" },
-    { label: "FAQ", icon: <FaQuestion />, path: "/faq" },
+  { label: "Inicio", icon: <FaHome />, path: "/" },
+  { label: "Quiénes Somos", icon: <FaUser />, path: "/quienes-somos" },
+  
+  // 🔹 Ahora Proceso es el tercero
+  { label: "Proceso", icon: <FaRoute />, path: "/proceso" },
 
-    // 🌿 ICONOS VERDES
-    {
-      label: "Análisis",
-      icon: <FaChartLine />,
-      path: "/analisis",
-      special: true
-    },
-    {
-      label: "Antiplagio",
-      icon: <FaShieldAlt />,
-      path: "/antiplagio",
-      special: true
-    }
-  ];
+  { label: "Servicios", icon: <FaCogs />, path: "/servicios" },
+  { label: "FAQ", icon: <FaQuestion />, path: "/faq" },
+
+  // 🌿 ICONOS VERDES
+  {
+    label: "Análisis",
+    icon: <FaChartLine />,
+    path: "/analisis",
+    special: true
+  },
+  {
+    label: "Antiplagio",
+    icon: <FaShieldAlt />,
+    path: "/antiplagio",
+    special: true
+  }
+];
+
 
   return (
     <nav className="nav-container">

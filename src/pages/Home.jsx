@@ -67,10 +67,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.45 }}
           >
-             El Dr. Omar Valencia Ledezma, científico mexicano con una sólida trayectoria en
-            investigación en salud, biología molecular, farmacología, genética y diagnóstico
-            microbiológico. Más de 15 años generando evidencia científica de alto impacto,
-            formando profesionales y desarrollando proyectos de investigación clínica.
+            El Grupo Omega, con una sólida trayectoria en investigación en salud, biología molecular, farmacología, genética y diagnóstico microbiológico. Más de 15 años generando evidencia científica de alto impacto, formando profesionales y desarrollando proyectos de investigación clínica.
           </motion.p>
         </motion.div>
 
@@ -106,7 +103,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Áreas Científicas Integradas por el Dr. Valencia Ledezma
+            Áreas Científicas Integradas por GRUPO OMEGA
           </motion.h3>
 
           <motion.div
@@ -194,7 +191,7 @@ export default function Home() {
       {/* ====================== WHY ====================== */}
       <section className="why-premium">
         <motion.h2 className="section-title" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
-          ¿Por qué trabajar con el Dr. Omar Valencia Ledezma?
+          ¿Por qué trabajar con GRUPO OMEGA?
         </motion.h2>
 
         <div className="why-grid-premium">
@@ -318,7 +315,7 @@ export default function Home() {
           {/* TESTIMONIO 1 */}
           <motion.div className="testimonial-card" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}>
             <p className="testimonial-text">
-              “La asesoría del Dr. Valencia Ledezma fue determinante para fortalecer la metodología y el análisis estadístico de mi tesis. Su rigor científico marca una diferencia real.”
+              “La asesoría con el grupo Omega fue determinante para fortalecer la metodología y el análisis estadístico de mi tesis. Su rigor científico marca una diferencia real.”
             </p>
             <span className="testimonial-author">Tesista de Maestría en Ciencias Biomédicas</span>
           </motion.div>
